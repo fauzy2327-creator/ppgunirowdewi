@@ -175,5 +175,12 @@ flex-direction:column;
 }
 
 }
+  .profil-text p,
+.inspirasi-text p,
+.lptk-content p,
+.ppl-content p,
+.keunikan-item p{
+text-align:justify;
+}
 
 }
