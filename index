@@ -1,8 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
 <nav class="navbar">
 
-<div class="menu">
+<h2>
+<a href="index.html" class="logo-home">
+E-Portfolio
+</a>
+</h2>
 
-<a href="index.html">Home</a>
+<div class="menu">
 
 <a href="profil.html">Profil</a>
 
@@ -21,3 +40,20 @@
 </div>
 
 </nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>DEWI NUR OVILIA</h1>
+
+<p>
+E-Portfolio Pendidikan Profesi Guru
+</p>
+
+</div>
+
+</header>
+
+</body>
+</html>
