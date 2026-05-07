@@ -164,57 +164,65 @@ box-shadow:0 10px 30px rgba(0,0,0,0.12);
 transition:0.4s;
 }
 
-/* FOTO PROFIL */
-.profil-img img{
-height:420px;
+/* PROFIL */
+.profil-box{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:50px;
+flex-direction:row;
 }
 
-/* HOVER */
-.profil-img img:hover,
-.inspirasi-foto img:hover,
-.lptk-image img:hover,
-.ppl-image img:hover,
-.keunikan-image img:hover{
-transform:scale(1.03);
+/* FOTO */
+.profil-img{
+flex:0 0 320px;
+}
+
+.profil-img img{
+width:320px;
+height:420px;
+object-fit:cover;
+border-radius:30px;
+display:block;
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
 /* TEKS */
-.profil-text,
-.inspirasi-text,
-.lptk-content,
-.ppl-content,
-.keunikan-content{
+.profil-text{
 flex:1;
 }
 
-/* HEADING */
-.profil-text h2,
-.inspirasi-text h2,
-.lptk-content h2,
-.ppl-content h2,
-.keunikan-content h3{
-font-size:38px;
-margin-bottom:15px;
+.profil-text h2{
+font-size:42px;
+margin-bottom:10px;
 color:#2563eb;
 }
 
-.profil-text h3,
-.ppl-content h3{
-font-size:28px;
+.profil-text h3{
+font-size:30px;
 margin-bottom:20px;
 }
 
-/* PARAGRAF */
-.profil-text p,
-.inspirasi-text p,
-.lptk-content p,
-.ppl-content p,
-.keunikan-content p{
+.profil-text p{
 font-size:17px;
 line-height:1.9;
 text-align:justify;
 margin-bottom:18px;
 color:#475569;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.profil-box{
+flex-direction:column;
+}
+
+.profil-img img{
+width:100%;
+height:auto;
+}
+
 }
 
 /* CARD ITEM */
