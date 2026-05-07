@@ -594,3 +594,41 @@ height:auto;
 }
 
 }
+/* FOTO KIRI TANPA TERPOTONG */
+.keunikan-image,
+.inspirasi-foto,
+.lptk-image,
+.ppl-image,
+.artefak-image{
+flex:0 0 320px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* GAMBAR */
+.keunikan-image img,
+.inspirasi-foto img,
+.lptk-image img,
+.ppl-image img,
+.artefak-image img{
+width:100%;
+height:auto;
+max-height:420px;
+object-fit:contain;
+background:white;
+border-radius:25px;
+padding:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+display:block;
+transition:0.4s;
+}
+
+/* HOVER */
+.keunikan-image img:hover,
+.inspirasi-foto img:hover,
+.lptk-image img:hover,
+.ppl-image img:hover,
+.artefak-image img:hover{
+transform:scale(1.02);
+}
