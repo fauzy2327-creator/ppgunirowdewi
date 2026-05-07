@@ -500,3 +500,44 @@ font-size:28px;
 }
 
 }
+/* FOTO INSPIRASI */
+.inspirasi-foto{
+flex:0 0 320px;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+}
+
+/* GAMBAR */
+.inspirasi-foto img{
+width:320px;
+height:auto;
+max-height:420px;
+object-fit:contain;
+background:white;
+padding:10px;
+border-radius:30px;
+display:block;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+transition:0.4s;
+}
+
+/* HOVER */
+.inspirasi-foto img:hover{
+transform:scale(1.02);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.inspirasi-foto{
+width:100%;
+flex:none;
+}
+
+.inspirasi-foto img{
+width:100%;
+height:auto;
+}
+
+}
