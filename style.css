@@ -265,6 +265,67 @@ height:auto;
 font-size:32px;
 }
 
+/* PROFIL */
+.profil-box{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:nowrap;
+}
+
+.profil-img{
+flex:0 0 280px;
+}
+
+.profil-img img{
+width:280px;
+height:280px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+display:block;
+}
+
+/* TEKS */
+.profil-text{
+flex:1;
+}
+
+.profil-text h2{
+font-size:40px;
+margin-bottom:10px;
+color:#2563eb;
+}
+
+.profil-text h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.profil-text p{
+line-height:1.9;
+text-align:justify;
+margin-bottom:18px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.profil-box{
+flex-direction:column;
+}
+
+.profil-img{
+flex:none;
+}
+
+.profil-img img{
+width:220px;
+height:220px;
+margin:auto;
+}
+
+}
 }
 
 }
