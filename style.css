@@ -1,3 +1,6 @@
+/* =========================
+   RESET
+========================= */
 *{
 margin:0;
 padding:0;
@@ -6,6 +9,9 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
+/* =========================
+   BODY
+========================= */
 body{
 background:
 linear-gradient(135deg,#dbeafe,#f8fafc);
@@ -13,7 +19,9 @@ color:#1e293b;
 overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar{
 position:fixed;
 top:0;
@@ -34,13 +42,16 @@ text-decoration:none;
 font-size:30px;
 font-weight:700;
 color:#1e293b;
+transition:0.3s;
 }
 
 .logo-home:hover{
 color:#2563eb;
 }
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 .menu{
 display:flex;
 flex-wrap:wrap;
@@ -64,7 +75,9 @@ color:white;
 transform:translateY(-2px);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero{
 height:100vh;
 background:
@@ -96,7 +109,9 @@ font-size:20px;
 color:#334155;
 }
 
-/* SECTION */
+/* =========================
+   SECTION
+========================= */
 section{
 max-width:1200px;
 margin:120px auto 50px;
@@ -107,12 +122,16 @@ border-radius:35px;
 box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .card{
 width:100%;
 }
 
-/* JUDUL */
+/* =========================
+   TITLE
+========================= */
 .page-title{
 font-size:46px;
 margin-bottom:20px;
@@ -128,7 +147,9 @@ margin-bottom:40px;
 color:#475569;
 }
 
-/* UNIVERSAL LAYOUT FOTO KIRI TEKS KANAN */
+/* =========================
+   UNIVERSAL LAYOUT
+========================= */
 .profil-box,
 .inspirasi-layout,
 .lptk-container,
@@ -136,11 +157,14 @@ color:#475569;
 .keunikan-item{
 display:flex;
 align-items:center;
+justify-content:flex-start;
 gap:40px;
 margin-top:35px;
 }
 
-/* FOTO */
+/* =========================
+   IMAGE CONTAINER
+========================= */
 .profil-img,
 .inspirasi-foto,
 .lptk-image,
@@ -149,7 +173,9 @@ margin-top:35px;
 flex:0 0 320px;
 }
 
-/* SEMUA GAMBAR */
+/* =========================
+   ALL IMAGES
+========================= */
 .profil-img img,
 .inspirasi-foto img,
 .lptk-image img,
@@ -164,46 +190,63 @@ box-shadow:0 10px 30px rgba(0,0,0,0.12);
 transition:0.4s;
 }
 
-/* PROFIL */
-.profil-box{
-display:flex;
-align-items:center;
-justify-content:flex-start;
-gap:50px;
-flex-direction:row;
-}
-
-/* FOTO */
-.profil-img{
-flex:0 0 320px;
-}
-
+/* FOTO PROFIL */
 .profil-img img{
-width:320px;
 height:420px;
-object-fit:cover;
-border-radius:30px;
-display:block;
-box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
-/* TEKS */
-.profil-text{
+/* HOVER IMAGE */
+.profil-img img:hover,
+.inspirasi-foto img:hover,
+.lptk-image img:hover,
+.ppl-image img:hover,
+.keunikan-image img:hover{
+transform:scale(1.03);
+}
+
+/* =========================
+   CONTENT
+========================= */
+.profil-text,
+.inspirasi-text,
+.lptk-content,
+.ppl-content,
+.keunikan-content{
 flex:1;
 }
 
-.profil-text h2{
-font-size:42px;
-margin-bottom:10px;
+/* =========================
+   HEADING
+========================= */
+.profil-text h2,
+.inspirasi-text h2,
+.lptk-content h2,
+.ppl-content h2{
+font-size:40px;
+margin-bottom:15px;
 color:#2563eb;
 }
 
-.profil-text h3{
-font-size:30px;
+.keunikan-content h3{
+font-size:32px;
+margin-bottom:15px;
+color:#2563eb;
+}
+
+.profil-text h3,
+.ppl-content h3{
+font-size:28px;
 margin-bottom:20px;
 }
 
-.profil-text p{
+/* =========================
+   PARAGRAPH
+========================= */
+.profil-text p,
+.inspirasi-text p,
+.lptk-content p,
+.ppl-content p,
+.keunikan-content p{
 font-size:17px;
 line-height:1.9;
 text-align:justify;
@@ -211,21 +254,9 @@ margin-bottom:18px;
 color:#475569;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.profil-box{
-flex-direction:column;
-}
-
-.profil-img img{
-width:100%;
-height:auto;
-}
-
-}
-
-/* CARD ITEM */
+/* =========================
+   CARD ITEM
+========================= */
 .keunikan-item{
 padding:30px;
 background:white;
@@ -239,7 +270,9 @@ transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(37,99,235,0.12);
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .btn-profil{
 padding:14px 30px;
 border:none;
@@ -257,7 +290,9 @@ background:#1d4ed8;
 transform:translateY(-3px);
 }
 
-/* MAPS */
+/* =========================
+   MAPS
+========================= */
 .maps-box{
 margin-top:25px;
 overflow:hidden;
@@ -271,7 +306,9 @@ height:320px;
 border:none;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer{
 margin-top:60px;
 padding:30px;
@@ -281,9 +318,12 @@ font-size:15px;
 color:#64748b;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media(max-width:900px){
 
+/* NAVBAR */
 .navbar{
 padding:15px 20px;
 flex-direction:column;
@@ -294,6 +334,7 @@ gap:15px;
 justify-content:center;
 }
 
+/* HERO */
 .hero-content h1{
 font-size:42px;
 }
@@ -302,12 +343,13 @@ font-size:42px;
 font-size:18px;
 }
 
+/* SECTION */
 section{
 padding:30px 20px;
 margin-top:140px;
 }
 
-/* SEMUA LAYOUT JADI VERTIKAL */
+/* LAYOUT */
 .profil-box,
 .inspirasi-layout,
 .lptk-container,
@@ -316,7 +358,7 @@ margin-top:140px;
 flex-direction:column;
 }
 
-/* FOTO RESPONSIVE */
+/* IMAGE */
 .profil-img,
 .inspirasi-foto,
 .lptk-image,
@@ -326,6 +368,7 @@ width:100%;
 flex:none;
 }
 
+/* RESPONSIVE IMAGE */
 .profil-img img,
 .inspirasi-foto img,
 .lptk-image img,
@@ -335,16 +378,21 @@ width:100%;
 height:auto;
 }
 
+/* TITLE */
 .page-title{
 font-size:34px;
 }
 
+/* HEADING */
 .profil-text h2,
 .inspirasi-text h2,
 .lptk-content h2,
-.ppl-content h2,
-.keunikan-content h3{
+.ppl-content h2{
 font-size:30px;
+}
+
+.keunikan-content h3{
+font-size:28px;
 }
 
 }
