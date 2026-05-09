@@ -1,996 +1,171 @@
 /* =========================
    RESET
 ========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 /* =========================
    BODY
 ========================= */
+
 body{
-background:
-linear-gradient(135deg,#dbeafe,#f8fafc);
-color:#1e293b;
-overflow-x:hidden;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    color:#1e293b;
+    overflow-x:hidden;
+    padding-top:90px;
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR PREMIUM
 ========================= */
+
 .navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(12px);
-z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 7%;
+
+    background:rgba(15,23,42,0.82);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+
+    z-index:9999;
 }
 
+/* LOGO */
+
 .logo-home{
-text-decoration:none;
-font-size:30px;
-font-weight:700;
-color:#1e293b;
-transition:0.3s;
+    text-decoration:none;
+    font-size:34px;
+    font-weight:800;
+    color:white;
+    letter-spacing:1px;
+    transition:0.3s;
 }
 
 .logo-home:hover{
-color:#2563eb;
+    color:#facc15;
 }
 
-/* =========================
-   MENU
-========================= */
+/* MENU */
+
 .menu{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
+
+/* LINK */
 
 .menu a{
-text-decoration:none;
-padding:10px 18px;
-border-radius:14px;
-background:white;
-color:#1e293b;
-font-weight:500;
-transition:0.3s;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    padding:10px 18px;
+    border-radius:12px;
+    transition:0.3s;
+    position:relative;
 }
 
-.menu a:hover,
+/* HOVER */
+
+.menu a:hover{
+    background:#2563eb;
+    transform:translateY(-2px);
+}
+
+/* ACTIVE */
+
 .menu a.active{
-background:#2563eb;
-color:white;
-transform:translateY(-2px);
+    background:#2563eb;
+}
+
+/* UNDERLINE */
+
+.menu a::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:50%;
+    bottom:6px;
+
+    width:0%;
+    height:2px;
+
+    background:#facc15;
+
+    transition:0.3s;
+
+    transform:translateX(-50%);
+}
+
+.menu a:hover::after,
+.menu a.active::after{
+    width:40%;
 }
 
 /* =========================
    HERO
 ========================= */
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(255,255,255,0.35),rgba(255,255,255,0.35)),
-url('img/hero.png') center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-background:rgba(255,255,255,0.55);
-padding:50px;
-border-radius:30px;
-backdrop-filter:blur(10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.hero-content h1{
-font-size:64px;
-margin-bottom:15px;
-color:#1e3a8a;
-}
-
-.hero-content p{
-font-size:20px;
-color:#334155;
-}
-
-/* =========================
-   SECTION
-========================= */
-section{
-max-width:1200px;
-margin:120px auto 50px;
-padding:50px;
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(10px);
-border-radius:35px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   CARD
-========================= */
-.card{
-width:100%;
-}
-
-/* =========================
-   TITLE
-========================= */
-.page-title{
-font-size:46px;
-margin-bottom:20px;
-color:#1e3a8a;
-font-weight:700;
-}
-
-.page-desc{
-font-size:18px;
-line-height:1.9;
-text-align:justify;
-margin-bottom:40px;
-color:#475569;
-}
-
-/* =========================
-   UNIVERSAL LAYOUT
-========================= */
-.profil-box,
-.inspirasi-layout,
-.lptk-container,
-.ppl-layout,
-.keunikan-item{
-display:flex;
-align-items:center;
-justify-content:flex-start;
-gap:40px;
-margin-top:35px;
-}
-
-/* =========================
-   IMAGE CONTAINER
-========================= */
-.profil-img,
-.inspirasi-foto,
-.lptk-image,
-.ppl-image,
-.keunikan-image{
-flex:0 0 320px;
-}
-
-/* =========================
-   ALL IMAGES
-========================= */
-.profil-img img,
-.inspirasi-foto img,
-.lptk-image img,
-.ppl-image img,
-.keunikan-image img{
-width:320px;
-height:220px;
-object-fit:cover;
-border-radius:28px;
-display:block;
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
-transition:0.4s;
-}
-
-/* FOTO PROFIL */
-.profil-img img{
-height:420px;
-}
-
-/* HOVER IMAGE */
-.profil-img img:hover,
-.inspirasi-foto img:hover,
-.lptk-image img:hover,
-.ppl-image img:hover,
-.keunikan-image img:hover{
-transform:scale(1.03);
-}
-
-/* =========================
-   CONTENT
-========================= */
-.profil-text,
-.inspirasi-text,
-.lptk-content,
-.ppl-content,
-.keunikan-content{
-flex:1;
-}
-
-/* =========================
-   HEADING
-========================= */
-.profil-text h2,
-.inspirasi-text h2,
-.lptk-content h2,
-.ppl-content h2{
-font-size:40px;
-margin-bottom:15px;
-color:#2563eb;
-}
-
-.keunikan-content h3{
-font-size:32px;
-margin-bottom:15px;
-color:#2563eb;
-}
-
-.profil-text h3,
-.ppl-content h3{
-font-size:28px;
-margin-bottom:20px;
-}
-
-/* =========================
-   PARAGRAPH
-========================= */
-.profil-text p,
-.inspirasi-text p,
-.lptk-content p,
-.ppl-content p,
-.keunikan-content p{
-font-size:17px;
-line-height:2;
-text-align:justify;
-margin-bottom:18px;
-color:#475569;
-}
-
-/* =========================
-   CARD ITEM
-========================= */
-.keunikan-item{
-padding:30px;
-background:white;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-transition:0.4s;
-}
-
-.keunikan-item:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(37,99,235,0.12);
-}
-
-/* =========================
-   BUTTON
-========================= */
-.btn-profil{
-padding:14px 30px;
-border:none;
-border-radius:40px;
-background:#2563eb;
-color:white;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn-profil:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
-}
-
-/* =========================
-   MAPS
-========================= */
-.maps-box{
-margin-top:25px;
-overflow:hidden;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.maps-box iframe{
-width:100%;
-height:320px;
-border:none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-margin-top:60px;
-padding:30px;
-text-align:center;
-background:white;
-font-size:15px;
-color:#64748b;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:900px){
-
-/* NAVBAR */
-.navbar{
-padding:15px 20px;
-flex-direction:column;
-gap:15px;
-}
-
-.menu{
-justify-content:center;
-}
-
-/* HERO */
-.hero-content h1{
-font-size:42px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-/* SECTION */
-section{
-padding:30px 20px;
-margin-top:140px;
-}
-
-/* LAYOUT */
-.profil-box,
-.inspirasi-layout,
-.lptk-container,
-.ppl-layout,
-.keunikan-item{
-flex-direction:column;
-}
-
-/* IMAGE */
-.profil-img,
-.inspirasi-foto,
-.lptk-image,
-.ppl-image,
-.keunikan-image{
-width:100%;
-flex:none;
-}
-
-/* RESPONSIVE IMAGE */
-.profil-img img,
-.inspirasi-foto img,
-.lptk-image img,
-.ppl-image img,
-.keunikan-image img{
-width:100%;
-height:auto;
-}
-
-/* TITLE */
-.page-title{
-font-size:34px;
-}
-
-/* HEADING */
-.profil-text h2,
-.inspirasi-text h2,
-.lptk-content h2,
-.ppl-content h2{
-font-size:30px;
-}
-
-.keunikan-content h3{
-font-size:28px;
-}
-
-}
-/* =========================
-   ARTEFAK
-========================= */
-
-.artefak-item{
-display:flex;
-align-items:center;
-gap:40px;
-padding:30px;
-margin-top:35px;
-background:white;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-/* HOVER */
-.artefak-item:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(37,99,235,0.15);
-}
-
-/* FOTO */
-.artefak-image{
-flex:0 0 320px;
-}
-
-.artefak-image img{
-width:320px;
-height:220px;
-object-fit:cover;
-border-radius:25px;
-display:block;
-box-shadow:0 10px 25px rgba(0,0,0,0.12);
-transition:0.4s;
-}
-
-.artefak-item:hover img{
-transform:scale(1.03);
-}
-
-/* TEKS */
-.artefak-content{
-flex:1;
-}
-
-.artefak-content h3{
-font-size:32px;
-margin-bottom:18px;
-color:#2563eb;
-}
-
-.artefak-content p{
-font-size:17px;
-line-height:1.9;
-text-align:justify;
-margin-bottom:20px;
-color:#475569;
-}
-
-/* BUTTON */
-.btn-drive{
-text-decoration:none;
-}
-
-.btn-drive button{
-padding:14px 28px;
-border:none;
-border-radius:40px;
-background:#2563eb;
-color:white;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn-drive button:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.artefak-item{
-flex-direction:column;
-}
-
-.artefak-image{
-width:100%;
-flex:none;
-}
-
-.artefak-image img{
-width:100%;
-height:auto;
-}
-
-.artefak-content h3{
-font-size:28px;
-}
-
-}
-/* FOTO INSPIRASI */
-.inspirasi-foto{
-flex:0 0 320px;
-display:flex;
-justify-content:center;
-align-items:flex-start;
-}
-
-/* GAMBAR */
-.inspirasi-foto img{
-width:320px;
-height:auto;
-max-height:420px;
-object-fit:contain;
-background:white;
-padding:10px;
-border-radius:30px;
-display:block;
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
-transition:0.4s;
-}
-
-/* HOVER */
-.inspirasi-foto img:hover{
-transform:scale(1.02);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.inspirasi-foto{
-width:100%;
-flex:none;
-}
-
-.inspirasi-foto img{
-width:100%;
-height:auto;
-}
-
-}
-/* =========================
-GURU YANG DITUJU
-========================= */
-
-.quote-box{
-
-max-width:1000px;
-
-margin:auto;
-
-padding:60px 50px;
-
-background:white;
-
-border-radius:30px;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,0.06);
-
-font-size:24px;
-
-line-height:2;
-
-text-align:center;
-
-color:#444;
-}
-
-.quote-box i{
-
-font-size:40px;
-
-color:#4f46e5;
-}
-
-/* =========================
-FEATURE CARD
-========================= */
-
-.feature-card{
-
-padding:40px 30px;
-
-text-align:center;
-}
-
-.feature-card i{
-
-font-size:50px;
-
-color:#4f46e5;
-
-margin-bottom:20px;
-}
-
-.feature-card h3{
-
-margin-bottom:15px;
-
-font-size:26px;
-
-color:#4f46e5;
-}
-
-.feature-card p{
-
-line-height:1.8;
-
-color:#666;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.quote-box{
-
-padding:35px 25px;
-
-font-size:18px;
-
-line-height:1.8;
-}
-
-}
-/* =========================
-NAVBAR MODERN ANIMATION
-========================= */
-
-.navbar{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-z-index:999;
-
-background:
-rgba(255,255,255,0.88);
-
-backdrop-filter:blur(14px);
-
-box-shadow:
-0 4px 20px rgba(0,0,0,0.05);
-
-animation:
-navbarFade 1s ease;
-}
-
-/* =========================
-NAV CONTAINER
-========================= */
-
-.nav-container{
-
-width:90%;
-max-width:1300px;
-
-margin:auto;
-
-padding:18px 0;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-/* =========================
-LOGO ANIMATION
-========================= */
-
-.logo-home{
-
-font-size:40px;
-font-weight:800;
-
-text-decoration:none;
-
-background:
-linear-gradient(
-135deg,
-#2563eb,
-#7c3aed
-);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-transition:0.4s;
-}
-
-.logo-home:hover{
-
-transform:scale(1.05);
-
-filter:drop-shadow(0 4px 10px rgba(37,99,235,0.3));
-}
-
-/* =========================
-MENU
-========================= */
-
-.menu{
-
-display:flex;
-align-items:center;
-gap:18px;
-
-flex-wrap:wrap;
-}
-
-/* =========================
-MENU LINK
-========================= */
-
-.menu a{
-
-position:relative;
-
-padding:12px 22px;
-
-border-radius:14px;
-
-text-decoration:none;
-
-font-size:16px;
-font-weight:600;
-
-color:#374151;
-
-transition:0.35s ease;
-
-overflow:hidden;
-}
-
-/* =========================
-HOVER EFFECT
-========================= */
-
-.menu a::before{
-
-content:'';
-
-position:absolute;
-
-top:0;
-left:-100%;
-
-width:100%;
-height:100%;
-
-background:
-linear-gradient(
-120deg,
-rgba(255,255,255,0.2),
-rgba(255,255,255,0.6),
-rgba(255,255,255,0.2)
-);
-
-transition:0.5s;
-}
-
-.menu a:hover::before{
-
-left:100%;
-}
-
-/* =========================
-ACTIVE + HOVER
-========================= */
-
-.menu a:hover,
-.menu .active{
-
-background:
-linear-gradient(
-135deg,
-#2563eb,
-#7c3aed
-);
-
-color:white;
-
-transform:
-translateY(-3px);
-
-box-shadow:
-0 8px 20px rgba(37,99,235,0.25);
-}
-
-/* =========================
-UNDERLINE EFFECT
-========================= */
-
-.menu a::after{
-
-content:'';
-
-position:absolute;
-
-left:50%;
-bottom:6px;
-
-width:0%;
-height:3px;
-
-background:white;
-
-border-radius:10px;
-
-transition:0.3s;
-
-transform:translateX(-50%);
-}
-
-.menu a:hover::after,
-.menu .active::after{
-
-width:45%;
-}
-
-/* =========================
-NAVBAR FADE
-========================= */
-
-@keyframes navbarFade{
-
-from{
-
-opacity:0;
-transform:translateY(-30px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.nav-container{
-
-flex-direction:column;
-
-gap:18px;
-}
-
-.menu{
-
-justify-content:center;
-
-gap:10px;
-}
-
-.menu a{
-
-padding:10px 18px;
-
-font-size:14px;
-}
-
-.logo-home{
-
-font-size:32px;
-}
-
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#f5f7fb;
-    overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-.navbar{
-    width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(10px);
-}
-
-.logo a{
-    color:white;
-    text-decoration:none;
-    font-size:28px;
-    font-weight:700;
-}
-
-.menu{
-    display:flex;
-    gap:25px;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    position:relative;
-    transition:0.3s;
-}
-
-.menu a::after{
-    content:'';
-    position:absolute;
-    width:0%;
-    height:2px;
-    background:#ffd54f;
-    left:0;
-    bottom:-5px;
-    transition:0.3s;
-}
-
-.menu a:hover::after{
-    width:100%;
-}
-
-.menu a:hover{
-    color:#ffd54f;
-}
-
-/* HERO */
 
 .hero{
     width:100%;
     height:100vh;
-    background:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop') center/cover;
-    position:relative;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('img/hero.png') center/cover no-repeat;
+
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:white;
-}
 
-.overlay{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
+    padding:20px;
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    padding:20px;
-    animation:fadeUp 1.5s ease;
+    color:white;
+    animation:fadeUp 1.3s ease;
 }
 
 .hero-content h1{
-    font-size:55px;
+    font-size:64px;
     margin-bottom:20px;
+    font-weight:800;
 }
 
 .hero-content p{
     font-size:22px;
     margin-bottom:30px;
+    line-height:1.8;
 }
+
+/* BUTTON */
 
 .hero-button a{
     display:inline-block;
-    padding:14px 35px;
-    background:#ffd54f;
-    color:#222;
+    padding:15px 35px;
+    background:#2563eb;
+    color:white;
     text-decoration:none;
     border-radius:50px;
     font-weight:600;
@@ -998,149 +173,389 @@ body{
 }
 
 .hero-button a:hover{
-    transform:scale(1.08);
-    background:white;
+    background:#1d4ed8;
+    transform:translateY(-3px);
 }
 
-/* FITUR */
+/* =========================
+   SECTION
+========================= */
 
-.fitur{
-    width:100%;
-    padding:80px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+section{
+    max-width:1200px;
+    margin:60px auto;
+    padding:50px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+/* =========================
+   TITLE
+========================= */
+
+.page-title{
+    font-size:48px;
+    margin-bottom:20px;
+    color:#1e3a8a;
+    font-weight:800;
+}
+
+.page-desc{
+    font-size:18px;
+    line-height:2;
+    text-align:justify;
+    color:#475569;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.profil-box,
+.inspirasi-layout,
+.lptk-container,
+.ppl-layout,
+.keunikan-item,
+.artefak-item{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-top:35px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.profil-img,
+.inspirasi-foto,
+.lptk-image,
+.ppl-image,
+.keunikan-image,
+.artefak-image{
+    flex:0 0 320px;
+}
+
+.profil-img img,
+.inspirasi-foto img,
+.lptk-image img,
+.ppl-image img,
+.keunikan-image img,
+.artefak-image img{
+
+    width:320px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
     transition:0.4s;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.profil-img img{
+    height:420px;
 }
 
-.card h3{
+.profil-img img:hover,
+.inspirasi-foto img:hover,
+.lptk-image img:hover,
+.ppl-image img:hover,
+.keunikan-image img:hover,
+.artefak-image img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.profil-text,
+.inspirasi-text,
+.lptk-content,
+.ppl-content,
+.keunikan-content,
+.artefak-content{
+    flex:1;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.profil-text h2,
+.inspirasi-text h2,
+.lptk-content h2,
+.ppl-content h2,
+.artefak-content h3{
+    font-size:40px;
     margin-bottom:15px;
-    color:#1565c0;
+    color:#2563eb;
 }
 
-.card p{
-    color:#555;
-    line-height:1.7;
+.keunikan-content h3{
+    font-size:32px;
+    margin-bottom:15px;
+    color:#2563eb;
 }
 
-/* ANIMASI */
+.profil-text h3,
+.ppl-content h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.profil-text p,
+.inspirasi-text p,
+.lptk-content p,
+.ppl-content p,
+.keunikan-content p,
+.artefak-content p{
+
+    font-size:17px;
+    line-height:2;
+    text-align:justify;
+    margin-bottom:18px;
+    color:#475569;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card,
+.keunikan-item,
+.artefak-item,
+.feature-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+    transition:0.4s;
+}
+
+.card:hover,
+.keunikan-item:hover,
+.artefak-item:hover,
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(37,99,235,0.12);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-profil,
+.btn-drive button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn-profil:hover,
+.btn-drive button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-box{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 50px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+    font-size:24px;
+
+    line-height:2;
+
+    text-align:center;
+
+    color:#444;
+}
+
+/* =========================
+   MAPS
+========================= */
+
+.maps-box{
+    margin-top:25px;
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.maps-box iframe{
+    width:100%;
+    height:320px;
+    border:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:60px;
+    padding:30px;
+    text-align:center;
+    background:white;
+    color:#64748b;
+}
+
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
         transform:translateY(40px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
 .navbar{
+
+    height:auto;
+
+    padding:18px;
+
     flex-direction:column;
-    gap:15px;
+
+    gap:18px;
 }
 
 .menu{
+
     flex-wrap:wrap;
+
     justify-content:center;
+
+    gap:10px;
+}
+
+.logo-home{
+    font-size:30px;
+}
+
+.menu a{
+
+    font-size:14px;
+
+    padding:10px 14px;
 }
 
 .hero-content h1{
-    font-size:38px;
+    font-size:42px;
 }
 
 .hero-content p{
     font-size:18px;
 }
 
-}
-/* =========================
-   NAVBAR
-========================= */
+section{
 
-.navbar{
+    padding:30px 20px;
+}
+
+.profil-box,
+.inspirasi-layout,
+.lptk-container,
+.ppl-layout,
+.keunikan-item,
+.artefak-item{
+
+    flex-direction:column;
+}
+
+.profil-img,
+.inspirasi-foto,
+.lptk-image,
+.ppl-image,
+.keunikan-image,
+.artefak-image{
+
     width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(12px);
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    flex:none;
 }
 
-.logo-home{
-    color:white;
-    text-decoration:none;
-    font-size:28px;
-    font-weight:700;
-    transition:0.3s;
-}
+.profil-img img,
+.inspirasi-foto img,
+.lptk-image img,
+.ppl-image img,
+.keunikan-image img,
+.artefak-image img{
 
-.logo-home:hover{
-    color:#ffd54f;
-}
-
-.menu{
-    display:flex;
-    align-items:center;
-    gap:22px;
-    flex-wrap:wrap;
-}
-
-.menu a{
-    position:relative;
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
-    padding:8px 0;
-    transition:0.3s ease;
-}
-
-.menu a::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:0%;
-    height:2px;
-    background:#ffd54f;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    color:#ffd54f;
-}
-
-.menu a:hover::after{
     width:100%;
+    height:auto;
 }
 
-.menu a.active{
-    color:#ffd54f;
+.page-title{
+    font-size:34px;
 }
 
-.menu a.active::after{
-    width:100%;
+.profil-text h2,
+.inspirasi-text h2,
+.lptk-content h2,
+.ppl-content h2,
+.artefak-content h3{
+    font-size:30px;
+}
+
 }
