@@ -628,3 +628,257 @@ line-height:1.8;
 }
 
 }
+/* =========================
+NAVBAR MODERN ANIMATION
+========================= */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:
+rgba(255,255,255,0.88);
+
+backdrop-filter:blur(14px);
+
+box-shadow:
+0 4px 20px rgba(0,0,0,0.05);
+
+animation:
+navbarFade 1s ease;
+}
+
+/* =========================
+NAV CONTAINER
+========================= */
+
+.nav-container{
+
+width:90%;
+max-width:1300px;
+
+margin:auto;
+
+padding:18px 0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* =========================
+LOGO ANIMATION
+========================= */
+
+.logo-home{
+
+font-size:40px;
+font-weight:800;
+
+text-decoration:none;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#7c3aed
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+transition:0.4s;
+}
+
+.logo-home:hover{
+
+transform:scale(1.05);
+
+filter:drop-shadow(0 4px 10px rgba(37,99,235,0.3));
+}
+
+/* =========================
+MENU
+========================= */
+
+.menu{
+
+display:flex;
+align-items:center;
+gap:18px;
+
+flex-wrap:wrap;
+}
+
+/* =========================
+MENU LINK
+========================= */
+
+.menu a{
+
+position:relative;
+
+padding:12px 22px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-size:16px;
+font-weight:600;
+
+color:#374151;
+
+transition:0.35s ease;
+
+overflow:hidden;
+}
+
+/* =========================
+HOVER EFFECT
+========================= */
+
+.menu a::before{
+
+content:'';
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+120deg,
+rgba(255,255,255,0.2),
+rgba(255,255,255,0.6),
+rgba(255,255,255,0.2)
+);
+
+transition:0.5s;
+}
+
+.menu a:hover::before{
+
+left:100%;
+}
+
+/* =========================
+ACTIVE + HOVER
+========================= */
+
+.menu a:hover,
+.menu .active{
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#7c3aed
+);
+
+color:white;
+
+transform:
+translateY(-3px);
+
+box-shadow:
+0 8px 20px rgba(37,99,235,0.25);
+}
+
+/* =========================
+UNDERLINE EFFECT
+========================= */
+
+.menu a::after{
+
+content:'';
+
+position:absolute;
+
+left:50%;
+bottom:6px;
+
+width:0%;
+height:3px;
+
+background:white;
+
+border-radius:10px;
+
+transition:0.3s;
+
+transform:translateX(-50%);
+}
+
+.menu a:hover::after,
+.menu .active::after{
+
+width:45%;
+}
+
+/* =========================
+NAVBAR FADE
+========================= */
+
+@keyframes navbarFade{
+
+from{
+
+opacity:0;
+transform:translateY(-30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.nav-container{
+
+flex-direction:column;
+
+gap:18px;
+}
+
+.menu{
+
+justify-content:center;
+
+gap:10px;
+}
+
+.menu a{
+
+padding:10px 18px;
+
+font-size:14px;
+}
+
+.logo-home{
+
+font-size:32px;
+}
+
+}
